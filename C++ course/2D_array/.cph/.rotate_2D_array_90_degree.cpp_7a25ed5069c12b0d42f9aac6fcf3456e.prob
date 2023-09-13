@@ -1,0 +1,1 @@
+{"name":"Local: rotate_2D_array_90_degree","url":"d:\\programming language\\C++ course\\2D_array\\rotate_2D_array_90_degree.cpp","tests":[{"id":1685157483789,"input":"3 3\n1 2 3\n4 5 6\n7 8 9","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programming language\\C++ course\\2D_array\\rotate_2D_array_90_degree.cpp","group":"local","local":true}

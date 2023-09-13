@@ -1,0 +1,1 @@
+{"name":"Local: first","url":"d:\\.umair\\programming language\\python\\string\\first.py","tests":[{"id":1685686061726,"input":"","output":"umair \n<class 'str'>\nsaifi\n<class 'str'>\numair saifi\nu"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\.umair\\programming language\\python\\string\\first.py","group":"local","local":true}

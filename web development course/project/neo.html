@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Edit Question</h2>
+    <hr>
+    <div class="heading-container">
+        <h4>Question Type</h4>
+        <h4>Question SubType</h4>
+    </div>
+        <div class="dropdown-container">
+        <select name="" id="">
+            <option value="apple">SELECT OPTION</option>
+            <option value="apple">B</option>
+            <option value="apple">C</option>
+            <option value="apple">D</option>
+            <option value="apple">E</option>
+        </select>
+        <select name="" id="">
+            <option value="apple">SELECT OPTION</option>
+            <option value="apple">B</option>
+            <option value="apple">C</option>
+            <option value="apple">D</option>
+            <option value="apple">E</option>
+        </select>
+        <br> <br> <br>
+    </div>
+
+    <div class="box">
+      <h2>Question MetaData</h2>
+      <h4>Manual Difficulty *</h4>
+    
+      <div class="container">
+        <div>
+          <input type="radio" value="Easy" name="options" id="Easy">
+          <label for="Easy">Easy</label>
+        </div>
+        <div>
+          <input type="radio" value="Medium" name="options" id="Medium">
+          <label for="Medium">Medium</label>
+        </div>
+        <div>
+          <input type="radio" value="Hard" name="options" id="Hard">
+          <label for="Hard">Hard</label>
+        </div>
+      </div>
+      <br>
+      <div class="container">
+        <div>
+          <label for="SubTopic">Sub Topic*</label>
+          <select name="dropdown" id="dropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+          </select>
+        </div>
+    
+        <div>
+          <label for="Topic">Topic</label>
+          <input type="text" id="input1" name="input1" placeholder="Enter text">
+        </div>
+    
+        <div>
+          <label for="Subject">Subject</label>
+          <input type="text" id="input2" name="input2" placeholder="Enter text">
+        </div>
+      </div>
+    </div>
+    
+
+    <br>
+    <div class="box">
+        <h3>Programmer Competency Matrix</h3>
+        <button id="addButton">Add Row</button>
+        <div id="container"></div>
+        <script src="script.js"></script>
+    </div>
+    <br>
+    <div class="box">
+        <div >
+            <div >
+              <button class="w3-bar-item w3-button tablink w3-blue" onclick="openCity(event,'Question Details')">Question Details</button>
+              <button class="w3-bar-item w3-button tablink" onclick="openCity(event,'solution or TestCases')">Solutions & Testcases</button>
+            </div>
+            
+            <div id="Question Details" class="w3-container w3-border city">
+              <h3>Question Details</h3>
+              <label for="">Question*</label>
+              <br> <br>
+              <input type="checkbox" id="textEditorCheckbox" onclick="toggleEditor('textEditor')">Text Editor
+              <input type="checkbox" id="codeEditorCheckbox" onclick="toggleEditor('codeEditor')">Code Editor
+            
+              <div id="textEditor" class="editor-container" style="display: none;">
+                <div class="editor-toolbar">
+                  <button onclick="formatText('bold')">Bold</button>
+                  <button onclick="formatText('italic')">Italic</button>
+                  <button onclick="formatText('underline')">Underline</button>
+                  <button onclick="formatText('insertUnorderedList')">List</button>
+                  <button onclick="insertLink()">Link</button>
+                  <button onclick="insertImage()">Image</button>
+                </div>
+                <div id="editor-content" contenteditable="true"></div>
+              </div>
+            
+              <div id="codeEditor" class="editor-container" style="display: none;">
+                <textarea id="codeEditorTextarea"></textarea>
+              </div>
+
+              <br><br>
+              <!-- upload file-->
+                <form action="/action_page.php" enctype="multipart/form-data">
+                  <label for="myfile">Upload a file:</label>
+                  <input type="file" id="myfile" name="myfile" multiple="multiple" />
+                  <br /><br />
+                  <input type="submit" />
+                </form>
+              <br><br>
+              <!--choose language-->
+              <label for="choose language">choose language*</label>
+              <br>
+              <select name="choose language" id="choose language" >
+                <option value="A">A</option>
+                <option value="B">B</option>
+                <option value="C">C</option>
+                <option value="D">D</option>
+                <option value="E">E</option>
+              </select>
+              <br> <br>
+
+              <label for="InputFormat" id="InputFormat">Input Format</label>
+
+              <div class="boxs">
+                <div class="editor-toolbar">
+                  <button onclick="formatText('bold')">Bold</button>
+                  <button onclick="formatText('italic')">Italic</button>
+                  <button onclick="formatText('underline')">Underline</button>
+                  <button onclick="formatText('insertUnorderedList')">List</button>
+                  <button onclick="insertLink()">Link</button>
+                  <button onclick="insertImage()">Image</button>
+                </div>
+                <div id="editor-content" contenteditable="true"></div>
+              </div>
+
+              <br> <br>
+
+              <label for="OutputFormat" id="OutputFormat">Output Format</label>
+              
+              <div class="boxs">
+                <div class="editor-toolbar">
+                  <button onclick="formatText('bold')">Bold</button>
+                  <button onclick="formatText('italic')">Italic</button>
+                  <button onclick="formatText('underline')">Underline</button>
+                  <button onclick="formatText('insertUnorderedList')">List</button>
+                  <button onclick="insertLink()">Link</button>
+                  <button onclick="insertImage()">Image</button>
+                </div>
+                <div id="editor-content" contenteditable="true"></div>
+              </div> 
+              <br>
+
+              <input type="checkbox">Enable Custom Input
+              <br>
+              <h3>Code Limit</h3>
+              
+              <label for="CodeConstraints" id="CodeConstraints">Code Constraints</label>
+              
+              <div class="boxs">
+                <div class="editor-toolbar">
+                  <button onclick="formatText('bold')">Bold</button>
+                  <button onclick="formatText('italic')">Italic</button>
+                  <button onclick="formatText('underline')">Underline</button>
+                  <button onclick="formatText('insertUnorderedList')">List</button>
+                  <button onclick="insertLink()">Link</button>
+                  <button onclick="insertImage()">Image</button>
+                </div>
+                <div id="editor-content" contenteditable="true"></div>
+              </div>
+              <br>
+              <input type="checkbox" name="ConsiderTimeLimitinEvaluations">Consider Time Limit in Evaluations
+              <br> <br> 
+                <div class="form-grid">
+                  <div>
+                    <label for="timeLimit">Time Limit:</label>
+                  </div>
+                  <div>
+                    <input type="number" id="timeLimit" min="0" max="100" step="1">
+                    <span>ms</span>
+                  </div>
+                
+                  <div>
+                    <label for="memoryLimit">Memory Limit:</label>
+                  </div>
+                  <div>
+                    <input type="number" id="memoryLimit" min="0" max="100" step="1">
+                    <span>kb</span>
+                  </div>
+                
+                  <div>
+                    <label for="outputLimit">Output Limit:</label>
+                  </div>
+                  <div>
+                    <input type="number" id="outputLimit" min="0" max="100" step="1">
+                    <span>chars</span>
+                  </div>
+                
+                  <div>
+                    <label for="codeSize">Code Size:</label>
+                  </div>
+                  <div>
+                    <input type="number" id="codeSize" min="0" max="100" step="1">
+                    <span>kb</span>
+                  </div>
+                </div>
+            </div>
+            
+            <div id="solution or TestCases" class="w3-container w3-border city" style="display:none">
+              <h2>Solutions</h2>
+              
+              <label for="ProgrammingSolution">Programming Solution *</label>
+              <br>
+              <select name="dropdown" id="dropdown">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select> <br> <br>
+
+              <button onclick="addSolutionOrTestcase()">Add Block</button>
+              
+              <div id="solutionTestcaseContainer"></div>
+            </div>
+
+        </div>          
+    </div>
+    <br>
+    
+</body>
+</html>

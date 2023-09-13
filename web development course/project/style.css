@@ -1,0 +1,98 @@
+.heading-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .heading-container h4 {
+    margin-right: 40px;
+  }
+
+  .dropdown-container {
+    margin-right: 40px;
+  }
+
+  .box {
+    border: 1px solid black;
+    padding: 10px;
+    width: 800px;
+  }
+
+  .boxs {
+    border: 1px solid black;
+    padding: 10px;
+    width: 500px;
+  }
+
+  .backgroundcolor{
+    background-color: grey;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .container select,
+  .container input {
+    margin-right: 10px;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .container > * {
+    margin-right: 10px;
+  }
+
+  .container > :last-child {
+    margin-right: 0;
+  }
+
+  .field-wrapper {
+    margin-bottom: 10px;
+  }
+  .row {
+    margin-bottom: 10px;
+  }
+  
+  .row h3 {
+    display: inline;
+    margin-right: 10px;
+  }
+  
+  .w3-bar .w3-button {
+    padding: 8px 16px;
+  }
+  
+  .w3-bar .w3-button.w3-blue {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  .editor-container {
+    margin-bottom: 20px;
+  }
+  .editor-toolbar button {
+    margin-right: 5px;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+  }
+
+  .inline-checkbox {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .text-input-block {
+    display: none;
+  }
+  
+  .dropdown {
+    display: none;
+  }
